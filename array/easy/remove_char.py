@@ -4,7 +4,7 @@
 def filter_list(l):
     new_list = []
     for char in l:
-        if isinstance(char, int):
+        if isinstance(char, int) or type(char) == int:
             new_list.append(char)
     return new_list
 

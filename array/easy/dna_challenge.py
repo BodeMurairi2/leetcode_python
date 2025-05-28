@@ -7,12 +7,16 @@ complement = {
     "C": "G"
 }
 
-def DNA_strand(dna):
+dna = "batcdsshagc"
+
+def DNA_strand(dna:str) -> str:
     """This function returns the DNA sequence"""
     new_string = ""
-    for i in dna:
-        if i.upper() in complement.keys():
-            new_string += complement[i.upper()]
+    for i in dna.upper():
+        if i in complement.keys():
+            new_string += complement[i]
         else:
             new_string += i.upper()
     return new_string.lower()
+
+print(DNA_strand(dna))
